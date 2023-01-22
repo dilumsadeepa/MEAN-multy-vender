@@ -13,6 +13,7 @@ import { ProductComponent } from './component/product/product.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { AdditemComponent } from './component/additem/additem.component';
 import { AdminsidebarComponent } from './component/adminsidebar/adminsidebar.component';
+import { OrdersComponent } from './component/orders/orders.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AdminsidebarComponent } from './component/adminsidebar/adminsidebar.com
     AdminComponent,
     AdditemComponent,
     AdminsidebarComponent,
+    OrdersComponent,
    
   ], 
   imports: [
