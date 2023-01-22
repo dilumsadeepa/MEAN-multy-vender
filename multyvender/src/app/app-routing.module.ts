@@ -7,6 +7,7 @@ import { HomeComponent } from "./component/home/home.component";
 import { ShopComponent } from "./component/shop/shop.component";
 import { CartComponent } from "./component/cart/cart.component";
 import { ProductComponent } from "./component/product/product.component";
+import { AdminComponent } from "./component/admin/admin.component";
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'shop', component: ShopComponent},
   { path: 'cart', component: CartComponent},
   { path: 'product', component: ProductComponent},
+  { path: 'admin', component: AdminComponent},
   
 ];
 
