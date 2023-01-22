@@ -12,6 +12,11 @@ import { ShopComponent } from './component/shop/shop.component';
 import { CartComponent } from './component/cart/cart.component';
 import { ProductComponent } from './component/product/product.component';
 import { AdminComponent } from './component/admin/admin.component';
+import { AdditemComponent } from './component/additem/additem.component';
+import { AdminsidebarComponent } from './component/adminsidebar/adminsidebar.component';
+import { OrdersComponent } from './component/orders/orders.component';
+import { UpdateitemComponent } from './component/updateitem/updateitem.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { AdminComponent } from './component/admin/admin.component';
     ShopComponent,
     CartComponent,
     ProductComponent,
-    AdminComponent
+    AdminComponent,
+    AdditemComponent,
+    AdminsidebarComponent,
+    OrdersComponent,
+    UpdateitemComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -77,82 +77,68 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Content Row -->
-                    <div class="row">
+                   
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">RS: 40,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+
+
+
+                     <!-- add product -->
+           <div class="container-fluid pt-2 px-4">
+            <div class="row g-4">
+                <div class="col-sm-12 col-xl-12">
+                    <div class="bg-secondary rounded h-100 p-4">
+                        <h6 class="mb-4">Add Product</h6>
+                    
+
+                        <form action="" method="post" enctype="multipart/form-data">
+
+                        <div class="input-group mb-3">
+                        <span class="input-group-text">@</span>
+                            <input type="text" class="form-control" name="product_name" placeholder="Product Name" >
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control" name="Product No" placeholder="Product No" aria-label="Server">
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">RS: 215,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
+                        <div class="input-group mb-3">
+                        <span class="input-group-text">@</span>
+                            <input type="number" class="form-control" name="product_unitprice" placeholder="Unit Price" >
+                        </div>                      
+<!--             
+                            <div class="mb-3">
+                                
+                                <input type="text" class="form-control" name="product_manufacture" placeholder="Manufacture">
+                                <div class="form-text">#Hint:  Add your product Manufacture here.
+                                </div>
+                            </div> -->
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="product_material" placeholder="material">
+                                <div class="form-text">#Hint:  Add your product material here.
                                 </div>
                             </div>
+
+
+                            <div class="input-group mb-3">
+                        <span class="input-group-text">@</span>
+                            <input type="number" class="form-control" name="product_quantity" placeholder="Quantity" >
+                            <span class="input-group-text">@</span>
+                            <input class="form-control bg-dark" type="file" name="product_image">
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Orders (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Product Description"
+                                id="floatingTextarea" style="height: 150px;"></textarea>
+                            <label for="floatingTextarea">Product Description</label>
                         </div>
+                        
+                            
+                            <button type="submit" name="add_product"class="btn btn-primary my-4" value="Add a product">Add</button>
 
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Orders</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                            
+                        </form>
                     </div>
-
+                </div>
                    
 
                 
