@@ -16,6 +16,7 @@ import { AdditemComponent } from './component/additem/additem.component';
 import { AdminsidebarComponent } from './component/adminsidebar/adminsidebar.component';
 import { OrdersComponent } from './component/orders/orders.component';
 import { UpdateitemComponent } from './component/updateitem/updateitem.component';
+import { LoginComponent } from './component/login/login.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { UpdateitemComponent } from './component/updateitem/updateitem.component
     AdminsidebarComponent,
     OrdersComponent,
     UpdateitemComponent,
+    LoginComponent,
 
   ],
   imports: [
