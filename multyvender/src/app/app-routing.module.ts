@@ -10,6 +10,7 @@ import { ProductComponent } from "./component/product/product.component";
 import { AdminComponent } from "./component/admin/admin.component";
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'about', component: AboutComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'home', component: HomeComponent},
@@ -17,7 +18,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent},
   { path: 'product', component: ProductComponent},
   { path: 'admin', component: AdminComponent},
-  
+
 ];
 
 @NgModule({
