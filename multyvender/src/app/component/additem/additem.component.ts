@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from 'src/product';
 import {ProductService  } from "../../service/product.service";
+import { CookieService } from 'ngx-cookie-service';
 
 
 @Component({
@@ -19,9 +20,10 @@ export class AdditemComponent {
 
   products:Product[] = [];
 
-  constructor(private productService: ProductService){}
+  constructor(private productService: ProductService, private cookieService: CookieService){}
 
   addProduct(){
+    let email = this.cookieService.get('email');
     const newProduct = {
       title : this.title,
       catagory : this.catagory,
@@ -29,6 +31,7 @@ export class AdditemComponent {
       price : this.price,
       dis : this.dis,
       img : this.img,
+      seller:email,
     }
 
     this.productService.addProduct(newProduct).subscribe((newProduct) => this.products.push(newProduct));
