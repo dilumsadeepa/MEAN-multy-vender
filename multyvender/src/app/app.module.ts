@@ -19,6 +19,8 @@ import { OrdersComponent } from './component/orders/orders.component';
 import { UpdateitemComponent } from './component/updateitem/updateitem.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
+import { UserComponent } from './component/user/user.component';
+import { UsersidebarComponent } from './component/usersidebar/usersidebar.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { RegisterComponent } from './component/register/register.component';
     UpdateitemComponent,
     LoginComponent,
     RegisterComponent,
+    UserComponent,
+    UsersidebarComponent,
 
   ],
   imports: [
