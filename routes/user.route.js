@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const userRoute = express.Router();
-// Employee model
+
 let User = require('../models/user');
-// Add Employee
+
 userRoute.route('/create').post((req, res, next) => {
   User.create(req.body, (error, data) => {
     if (error) {
@@ -13,7 +13,7 @@ userRoute.route('/create').post((req, res, next) => {
     }
   })
 });
-// Get All Employees
+
 userRoute.route('/').get((req, res) => {
   User.find((error, data) => {
     if (error) {
@@ -23,7 +23,7 @@ userRoute.route('/').get((req, res) => {
     }
   })
 })
-// Get single employee
+
 userRoute.route('/read/:id').get((req, res) => {
   User.findById(req.params.id, (error, data) => {
     if (error) {
@@ -34,7 +34,7 @@ userRoute.route('/read/:id').get((req, res) => {
   })
 })
 
-// Update employee
+
 userRoute.route('/update/:id').put((req, res, next) => {
   User.findByIdAndUpdate(req.params.id, {
     $set: req.body
@@ -48,7 +48,7 @@ userRoute.route('/update/:id').put((req, res, next) => {
     }
   })
 })
-// Delete employee
+
 userRoute.route('/delete/:id').delete((req, res, next) => {
   User.findOneAndRemove(req.params.id, (error, data) => {
     if (error) {

@@ -15,6 +15,7 @@ import { UpdateitemComponent } from "./component/updateitem/updateitem.component
 
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'about', component: AboutComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'home', component: HomeComponent},
@@ -22,11 +23,12 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent},
   { path: 'product', component: ProductComponent},
   { path: 'admin', component: AdminComponent},
+
   { path: 'additem', component: AdditemComponent},
   { path: 'adminsidebar', component: AdminsidebarComponent},
   { path: 'orders', component: OrdersComponent},
   { path: 'updateitem', component: UpdateitemComponent},
-  
+
 ];
 
 @NgModule({
