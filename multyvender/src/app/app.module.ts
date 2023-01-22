@@ -11,6 +11,9 @@ import { ShopComponent } from './component/shop/shop.component';
 import { CartComponent } from './component/cart/cart.component';
 import { ProductComponent } from './component/product/product.component';
 import { AdminComponent } from './component/admin/admin.component';
+import { AdditemComponent } from './component/additem/additem.component';
+import { AdminsidebarComponent } from './component/adminsidebar/adminsidebar.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { AdminComponent } from './component/admin/admin.component';
     ShopComponent,
     CartComponent,
     ProductComponent,
-    AdminComponent
+    AdminComponent,
+    AdditemComponent,
+    AdminsidebarComponent,
+   
   ], 
   imports: [
     BrowserModule,
