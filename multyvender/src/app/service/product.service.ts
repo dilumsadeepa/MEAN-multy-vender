@@ -16,5 +16,11 @@ export class ProductService {
     return this.http.get<Product[]>(this.apiurl);
   }
 
+  getSingleProduct(id: String): Observable<Product[]> {
+    let url = this.apiurl+'/read/'+id;
+
+    return this.http.get<Product[]>(url);
+  }
+
 
 }
