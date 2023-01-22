@@ -26,6 +26,10 @@ const productSchema = new Schema({
     type: String,
     required: true
   },
+  seller: {
+    type: String,
+    required: true
+  },
 }, { timestamps: true });
 
 const Product = mongoose.model('Product', productSchema); 

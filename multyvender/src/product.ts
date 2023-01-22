@@ -6,5 +6,6 @@ export interface Product {
   price:String;
   dis:String;
   img:String;
+  seller:string;
 
 }
