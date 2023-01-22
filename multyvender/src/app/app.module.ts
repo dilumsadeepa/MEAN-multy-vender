@@ -17,6 +17,7 @@ import { AdminsidebarComponent } from './component/adminsidebar/adminsidebar.com
 import { OrdersComponent } from './component/orders/orders.component';
 import { UpdateitemComponent } from './component/updateitem/updateitem.component';
 import { LoginComponent } from './component/login/login.component';
+import { RegisterComponent } from './component/register/register.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { LoginComponent } from './component/login/login.component';
     OrdersComponent,
     UpdateitemComponent,
     LoginComponent,
+    RegisterComponent,
 
   ],
   imports: [
