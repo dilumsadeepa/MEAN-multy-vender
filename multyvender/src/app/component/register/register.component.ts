@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class RegisterComponent {
 
+  name!:String;
+  email!: String;
+  tel!:String;
+  password!:String;
+  role!:String;
+
 }

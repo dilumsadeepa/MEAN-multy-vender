@@ -2,7 +2,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-       
+
         <app-adminsidebar></app-adminsidebar>
 
 
@@ -21,7 +21,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                  
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -65,7 +65,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                   
+
 
 
 
@@ -77,59 +77,59 @@
                 <div class="col-sm-12 col-xl-12">
                     <div class="bg-secondary rounded h-100 p-4">
                         <h6 class="mb-4">Add Product</h6>
-                    
 
-                        <form action="" method="post" enctype="multipart/form-data">
+
+                        <!-- <form action="" method="post" enctype="multipart/form-data"> -->
 
                         <div class="input-group mb-3">
                         <span class="input-group-text">@</span>
-                            <input type="text" class="form-control" name="product_name" placeholder="Product Name" >
+                            <input type="text" class="form-control" [(ngModel)]="title" name="product_name" placeholder="Product Name" >
                             <span class="input-group-text">@</span>
-                            <input type="text" class="form-control" name="Product No" placeholder="Product No" aria-label="Server">
+                            <input type="text" class="form-control" [(ngModel)]="catagory" name="Product No" placeholder="Product Catagory" aria-label="Server">
                         </div>
 
                         <div class="input-group mb-3">
                         <span class="input-group-text">@</span>
-                            <input type="number" class="form-control" name="product_unitprice" placeholder="Unit Price" >
-                        </div>                      
-<!--             
+                            <input type="number" class="form-control" [(ngModel)]="price" name="product_unitprice" placeholder="Unit Price" >
+                        </div>
+<!--
                             <div class="mb-3">
-                                
+
                                 <input type="text" class="form-control" name="product_manufacture" placeholder="Manufacture">
                                 <div class="form-text">#Hint:  Add your product Manufacture here.
                                 </div>
                             </div> -->
                             <div class="mb-3">
-                                <input type="text" class="form-control" name="product_material" placeholder="material">
-                                <div class="form-text">#Hint:  Add your product material here.
+                                <input type="text" [(ngModel)]="discount" class="form-control" name="product_material" placeholder="Discount">
+                                <div class="form-text">#Hint:  Add your product Discount hear, like 20%.
                                 </div>
                             </div>
 
 
                             <div class="input-group mb-3">
-                        <span class="input-group-text">@</span>
-                            <input type="number" class="form-control" name="product_quantity" placeholder="Quantity" >
+                        <!-- <span class="input-group-text">@</span>
+                            <input type="number" class="form-control" name="product_quantity" placeholder="Quantity" > -->
                             <span class="input-group-text">@</span>
-                            <input class="form-control bg-dark" type="file" name="product_image">
+                            <input class="form-control bg-dark" [(ngModel)]="img" type="text" name="product_image" placeholder="Image Link">
                         </div>
 
                         <div class="form-floating">
-                            <textarea class="form-control" placeholder="Product Description"
+                            <textarea class="form-control" [(ngModel)]="dis" placeholder="Product Description"
                                 id="floatingTextarea" style="height: 150px;"></textarea>
                             <label for="floatingTextarea">Product Description</label>
                         </div>
-                        
-                            
-                            <button type="submit" name="add_product"class="btn btn-primary my-4" value="Add a product">Add</button>
 
 
-                            
-                        </form>
+                            <button type="submit" (click)="addProduct()" name="add_product"class="btn btn-primary my-4" value="Add a product">Add</button>
+
+
+
+                        <!-- </form> -->
                     </div>
                 </div>
-                   
 
-                
+
+
                 <!-- /.container-fluid -->
 
             </div>
