@@ -79,7 +79,6 @@
                                 <table class="table text-start align-middle table-bordered table-hover mb-0" id="example">
                                     <thead>
                                         <tr class="text-white">
-                                            <th scope="col">Item No</th>
                                             <th scope="col">Item Name</th>
                                             <th scope="col">Unit Price</th>
                                             <th scope="col">Quantity</th>
@@ -88,13 +87,11 @@
                                         </tr>
                                     </thead>
 
-                                        <tr>
-                                            <td>data</td>
-                                            <td>data</td>
-                                            <td>data</td>
-                                            <td>data</td>
-                                            <td><button type="button" class="btn btn-success mx-2">Edit</button> 
-                                            <button type="button" class="btn btn-danger">Delete</button></td> 
+                                        <tr *ngFor="let product of products">
+                                            <td style="color:white;">{{product.title}}</td>
+                                            <td style="color:white;">RS: {{product.price}}</td>
+                                            <td style="color:white;">10</td>
+                                            <td> <button type="button" class="btn btn-danger">Delete</button></td> 
 
                                         </tr>
                             
