@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Product } from 'src/product';
 import {ProductService  } from "../../service/product.service";
 import { CookieService } from 'ngx-cookie-service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class AdditemComponent {
 
   products:Product[] = [];
 
-  constructor(private productService: ProductService, private cookieService: CookieService){}
+  constructor(private productService: ProductService, private cookieService: CookieService,private router:Router){}
 
   addProduct(){
     let email = this.cookieService.get('email');
@@ -44,5 +45,14 @@ export class AdditemComponent {
     this.img = "";
   }
 
+
+
+
+
+  logout(){
+    this.cookieService.delete('name');
+    this.cookieService.delete('email');
+    this.router.navigate(['/login']);
+  }
 
 }

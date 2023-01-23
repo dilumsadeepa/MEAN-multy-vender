@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ChatService } from "../../service/chat.service";
 import { CookieService } from 'ngx-cookie-service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat',
@@ -15,7 +16,7 @@ export class ChatComponent {
   newMessage = {};
   messageList: string[] = [];
 
-  constructor(private chatService: ChatService, private cookieService: CookieService){
+  constructor(private chatService: ChatService, private cookieService: CookieService,private router:Router){
 
   }
 
@@ -34,6 +35,13 @@ export class ChatComponent {
     this.newMessage = this.email+" : "+this.sMessage;
     this.chatService.sendMessage(this.newMessage);
     this.sMessage = '';
+  }
+
+
+  logout(){
+    this.cookieService.delete('name');
+    this.cookieService.delete('email');
+    this.router.navigate(['/login']);
   }
 
 }

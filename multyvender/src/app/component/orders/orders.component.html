@@ -29,7 +29,11 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <button type="button" class="btn btn-danger">Log out</button>
+                            <button type="button" class="btn btn-success" [routerLink]="['/home']">Home</button>
+                        </li>
+                
+                        <li class="nav-item dropdown no-arrow mx-2">
+                            <button (click)="logout()" type="button" class="btn btn-danger mx-2">Log out</button>
                         </li>
 
                     </ul>

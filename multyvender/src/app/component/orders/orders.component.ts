@@ -7,6 +7,7 @@ import { Product } from "../../../product";
 import { Order } from "../../../order";
 import { CookieService } from 'ngx-cookie-service';
 
+
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
@@ -25,6 +26,14 @@ export class OrdersComponent {
     this.productService.getProduct().subscribe((products) => (this.products = products));
 
     this.email = this.cookieService.get('email');
+  }
+
+
+
+  logout(){
+    this.cookieService.delete('name');
+    this.cookieService.delete('email');
+    this.router.navigate(['/login']);
   }
 
 }

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -7,5 +9,15 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
+  constructor(private router:Router,
+    
+    private cookieService: CookieService,
+    ) { }
+
+  logout(){
+    this.cookieService.delete('name');
+    this.cookieService.delete('email');
+    this.router.navigate(['/login']);
+  }
 }
 

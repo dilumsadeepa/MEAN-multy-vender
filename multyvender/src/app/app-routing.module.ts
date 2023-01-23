@@ -30,11 +30,12 @@ const routes: Routes = [
   { path: 'shop', component: ShopComponent},
   { path: 'cart', component: CartComponent},
   { path: 'product/:id', component: ProductComponent},
-  { path: 'admin', component: AdminComponent},
+  //{ path: 'admin', component: AdminComponent},
 
   { path: 'additem', component: AdditemComponent},
   { path: 'adminsidebar', component: AdminsidebarComponent},
   { path: 'orders', component: OrdersComponent},
+  { path: 'admin', pathMatch: 'full', redirectTo: 'updateitem' },
   { path: 'updateitem', component: UpdateitemComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
