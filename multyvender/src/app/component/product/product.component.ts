@@ -31,11 +31,9 @@ export class ProductComponent {
     });
     this.productService.getProduct().subscribe((products) => (this.products = products));
 
-    this.email = this.cookieService.get('name');
+    this.email = this.cookieService.get('email');
 
-    console.log('====================================');
-    console.log(this.products);
-    console.log('====================================');
+
   }
 
   buynow(){

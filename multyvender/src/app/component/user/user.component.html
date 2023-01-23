@@ -2,7 +2,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-       
+
         <app-usersidebar></app-usersidebar>
 
 
@@ -20,7 +20,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                  
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -64,7 +64,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                   
+
 
 
                     <!-- Recent Sales Start -->
@@ -78,29 +78,32 @@
                                 <table class="table text-start align-middle table-bordered table-hover mb-0" id="example">
                                     <thead>
                                         <tr class="text-white">
-                                            
+
                                             <th scope="col">Item Name</th>
                                             <th scope="col">Unit Price</th>
-                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Image</th>
                                             <th scope="col">Seller</th>
                                             <th scope="col">Rating</th>
-                                           
+
 
                                         </tr>
                                     </thead>
 
-                                        <tr>
-                                            
-                                            <td>data</td>
-                                            <td>data</td>
-                                            <td>data</td>
-                                            <td>data</td>
-                                            <td><button type="button" class="btn btn-success mx-2">Positive</button> 
+                                    <tbody *ngFor="let order of orders">
+
+                                        <tr *ngFor="let product of products">
+                                            <td *ngIf="email == order.cusid && order.productid == product._id" style="color: white;">{{product.title}}</td>
+                                            <td *ngIf="email == order.cusid && order.productid == product._id" style="color: white;">{{product.price}}</td>
+                                            <td *ngIf="email == order.cusid && order.productid == product._id" style="color: white;"><img src="{{product.img}}" width="60px" alt=""></td>
+                                            <td *ngIf="email == order.cusid && order.productid == product._id" style="color: white;">{{product.seller}}</td>
+                                            <td *ngIf="email == order.cusid && order.productid == product._id" style="color: white;"><button type="button" class="btn btn-success mx-2">Positive</button>
                                                 <button type="button" class="btn btn-danger mx-2">Negative</button> </td>
-                                            
+
 
                                         </tr>
-                            
+
+                                      </tbody>
+
                                 </table>
                             </div>
                         </div>
@@ -112,7 +115,7 @@
 
 
 
-                
+
                 <!-- /.container-fluid -->
 
             </div>

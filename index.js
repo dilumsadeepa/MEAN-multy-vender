@@ -32,12 +32,14 @@ app.use(
 const userRoute = require('./routes/user.route')
 const productRoute = require('./routes/product.route')
 const orderRoute = require('./routes/order.route')
+const ratingRoute = require('./routes/rating.route')
 // const taskRoute = require('./routes/task.route')
 // app.use(express.static(path.join(__dirname, '../../client')))
 // app.use('/', express.static(path.join(__dirname, '../../client')))
 app.use('/user', userRoute)
 app.use('/product', productRoute)
 app.use('/order', orderRoute)
+app.use('/rating', ratingRoute)
 // app.use('/task', taskRoute)
 
 io.on('connection', (socket) => {

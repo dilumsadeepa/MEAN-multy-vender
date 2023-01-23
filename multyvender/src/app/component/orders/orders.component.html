@@ -2,7 +2,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-       
+
         <app-adminsidebar></app-adminsidebar>
 
 
@@ -21,7 +21,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                   
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -65,7 +65,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                   
+
 
 
                     <!-- Recent Sales Start -->
@@ -80,22 +80,23 @@
                                     <thead>
                                         <tr class="text-white">
                                             <th scope="col">Order ID</th>
-                                            <th scope="col">Customer ID</th>
+                                            <th scope="col">Customer email</th>
                                             <th scope="col">Product</th>
-                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Price</th>
 
                                         </tr>
                                     </thead>
+                                      <tbody *ngFor="let order of orders">
+                                        <tr *ngFor="let product of products" style="color: white;">
+                                            <td *ngIf="email == product.seller && product._id == order.productid">{{order._id}}</td>
+                                            <td *ngIf="email == product.seller && product._id == order.productid">{{order.cusid}}</td>
+                                            <td *ngIf="email == product.seller && product._id == order.productid">{{product.title}}</td>
+                                            <td *ngIf="email == product.seller && product._id == order.productid">{{product.price}}</td>
 
-                                        <tr>
-                                            <td>data</td>
-                                            <td>data</td>
-                                            <td>data</td>
-                                            <td>data</td>
-                                            
 
                                         </tr>
-                            
+                                      </tbody>
+
                                 </table>
                             </div>
                         </div>
@@ -107,7 +108,7 @@
 
 
 
-                
+
                 <!-- /.container-fluid -->
 
             </div>
