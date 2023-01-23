@@ -11,6 +11,22 @@ export class RegisterComponent {
   email!: String;
   tel!:String;
   password!:String;
+  repassword!:String;
   role!:String;
 
+
+  
+
+
+  addaddUser(){
+    const newProduct = {
+      name : this.name,
+      email : this.email,
+      tel : this.tel,
+      password : this.password,
+      repassword : this.repassword,
+      
+    }
+
+  }
 }
