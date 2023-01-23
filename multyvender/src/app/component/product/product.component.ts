@@ -21,7 +21,7 @@ export class ProductComponent {
   email!:string;
 
   private routeSub: Subscription = new Subscription;
-  constructor(private route: ActivatedRoute, private productService: ProductService, private orderService: OrderService, private cookieService: CookieService) { }
+  constructor(private route: ActivatedRoute, private router:Router, private productService: ProductService, private orderService: OrderService, private cookieService: CookieService) { }
 
   ngOnInit(){
     this.routeSub = this.route.params.subscribe(params => {
@@ -39,13 +39,14 @@ export class ProductComponent {
   }
 
   buynow(){
-
     const newOrder: Order = {
       cusid:this.email,
       productid:this.id,
     };
 
     this.orderService.addOrder(newOrder).subscribe((newTask) => this.orders.push(newOrder));
+
+    this.router.navigate(['/user']);
 
   }
 
