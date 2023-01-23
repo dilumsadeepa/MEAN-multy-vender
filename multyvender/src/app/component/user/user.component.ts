@@ -47,5 +47,11 @@ export class UserComponent {
 
   }
 
+  logout(){
+    this.cookieService.delete('name');
+    this.cookieService.delete('email');
+    this.router.navigate(['/login']);
+  }
+
 
 }

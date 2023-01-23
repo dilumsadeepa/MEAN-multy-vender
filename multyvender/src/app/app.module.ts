@@ -22,6 +22,7 @@ import { RegisterComponent } from './component/register/register.component';
 import { UserComponent } from './component/user/user.component';
 import { UsersidebarComponent } from './component/usersidebar/usersidebar.component';
 import { ChatComponent } from './component/chat/chat.component';
+import { ChatUserComponent } from './component/chat-user/chat-user.component';
 
 
 
@@ -47,6 +48,7 @@ import { ChatComponent } from './component/chat/chat.component';
     UserComponent,
     UsersidebarComponent,
     ChatComponent,
+    ChatUserComponent,
  
     
 
