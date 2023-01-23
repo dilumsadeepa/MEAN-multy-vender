@@ -2,7 +2,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-       
+
         <app-adminsidebar></app-adminsidebar>
 
 
@@ -21,7 +21,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -44,19 +44,29 @@
                     <div class="row">
 
                     <!-- chat start -->
-
-
-                    
-
-
-
-                    <!-- chat end -->
-
-
+                    <div *ngFor="let message of messageList" class="ms-body">
+                      <p *ngIf="message.includes(email,0)" class="smsg">
+                          {{message}}
+                      </p>
+                      <p *ngIf="!message.includes(email,0)">
+                        {{message}}
+                      </p>
+                    </div>
 
 
                     </div>
-                </div>     
+                    <div class="row">
+                      <div class="col">
+                        <input class="form-control sin"
+                          [(ngModel)]="sMessage"
+                          (keyup)="$event.keyCode == 13 && sendMessage()"
+                        />
+                      </div>
+                      <div class="col">
+                        <button (click)="sendMessage()" class="btn btn-primary">Send Message</button>
+                      </div>
+                    </div>
+                </div>
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">

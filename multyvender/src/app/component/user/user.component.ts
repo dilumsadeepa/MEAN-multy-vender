@@ -3,8 +3,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProductService } from "../../service/product.service";
 import { OrderService } from "../../service/order.service";
+import { RatingService } from "../../service/rating.service";
 import { Product } from "../../../product";
 import { Order } from "../../../order";
+import { Rating } from "../../../rating";
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
@@ -16,9 +18,14 @@ export class UserComponent {
 
   products: Product[] = [];
   orders: Order[] = [];
+  ratings: Rating[] = [];
   email!:string;
 
-  constructor(private router:Router, private productService: ProductService, private orderService: OrderService, private cookieService: CookieService) { }
+  constructor(private router:Router,
+    private productService: ProductService,
+    private orderService: OrderService,
+    private cookieService: CookieService,
+    private ratingService: RatingService) { }
 
   ngOnInit(){
     this.orderService.getOrder().subscribe((orders) => (this.orders = orders));
@@ -29,6 +36,16 @@ export class UserComponent {
 
   }
 
+  addrate(productid: String){
+
+    const newRating:Rating= {
+      productid: productid,
+      level: "1",
+     };
+
+    this.ratingService.addrating(newRating).subscribe((newRating) => this.ratings.push(newRating));
+
+  }
 
 
 }
