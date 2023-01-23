@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProductService } from "../../service/product.service";
+import { OrderService } from "../../service/order.service";
 import { Product } from "../../../product";
+import { Order } from "../../../order";
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-product',
@@ -12,11 +15,13 @@ import { Product } from "../../../product";
 export class ProductComponent {
 
   products: Product[] = [];
-  id!:String;
+  orders: Order[] = [];
+  id!:string;
   img!:string;
+  email!:string;
 
   private routeSub: Subscription = new Subscription;
-  constructor(private route: ActivatedRoute, private productService: ProductService) { }
+  constructor(private route: ActivatedRoute, private productService: ProductService, private orderService: OrderService, private cookieService: CookieService) { }
 
   ngOnInit(){
     this.routeSub = this.route.params.subscribe(params => {
@@ -26,9 +31,22 @@ export class ProductComponent {
     });
     this.productService.getProduct().subscribe((products) => (this.products = products));
 
+    this.email = this.cookieService.get('name');
+
     console.log('====================================');
     console.log(this.products);
     console.log('====================================');
+  }
+
+  buynow(){
+
+    const newOrder: Order = {
+      cusid:this.email,
+      productid:this.id,
+    };
+
+    this.orderService.addOrder(newOrder).subscribe((newTask) => this.orders.push(newOrder));
+
   }
 
 }
