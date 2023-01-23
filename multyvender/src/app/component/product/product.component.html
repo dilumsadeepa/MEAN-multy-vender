@@ -26,7 +26,12 @@
                                     <div class="mx-2"> <span> {{product.discount}}</span> </div>
                                 </div>
                             </div>
-                            <p class="about mt-5">{{product.dis}} </p>
+                            <div class="mt-4 mb-3"> 
+                                <div class="price d-flex flex-row align-items-center"> <span class="act-price" style="color: green;"><i class="bi bi-star-fill"></i></span>
+                                    <div class="mx-2"> <span>1</span> </div>
+                                </div>
+                            </div>
+                            <p class="about mt-3">{{product.dis}} </p>
                                 <div class="cart mt-4 ">
                                     <button (click)="buynow()" class="btn btn-danger text-uppercase mx-1">Buy Now</button>
                                     <button class="btn btn-info text-uppercase mx-1">Chat Now</button>
