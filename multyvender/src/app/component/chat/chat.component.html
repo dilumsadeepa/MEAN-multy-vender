@@ -21,7 +21,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                  
+                    
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -40,52 +40,23 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                   
+                    <!-- Content Row -->
+                    <div class="row">
+
+                    <!-- chat start -->
 
 
-                    <!-- Recent Sales Start -->
-                    <div class="container-fluid pt-2 px-4">
-                        <div class="bg-secondary text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Items</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table text-start align-middle table-bordered table-hover mb-0" id="example">
-                                    <thead>
-                                        <tr class="text-white">
-                                            <th scope="col">Item Name</th>
-                                            <th scope="col">Unit Price</th>
-                                            <th scope="col">Quantity</th>
-                                            <th></th>
+                    
 
-                                        </tr>
-                                    </thead>
 
-                                        <tr *ngFor="let product of products">
-                                            <td style="color:white;">{{product.title}}</td>
-                                            <td style="color:white;">RS: {{product.price}}</td>
-                                            <td style="color:white;">10</td>
-                                            <td> <button type="button" class="btn btn-danger">Delete</button></td> 
 
-                                        </tr>
-                            
-                                </table>
-                            </div>
-                        </div>
+                    <!-- chat end -->
+
+
+
+
                     </div>
-
-
-
-                    <!-- Recent Sales End -->
-
-
-
-                
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
+                </div>     
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">

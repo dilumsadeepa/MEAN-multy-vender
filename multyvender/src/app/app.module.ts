@@ -21,6 +21,10 @@ import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { UserComponent } from './component/user/user.component';
 import { UsersidebarComponent } from './component/usersidebar/usersidebar.component';
+import { ChatComponent } from './component/chat/chat.component';
+
+
+
 
 
 @NgModule({
@@ -42,6 +46,9 @@ import { UsersidebarComponent } from './component/usersidebar/usersidebar.compon
     RegisterComponent,
     UserComponent,
     UsersidebarComponent,
+    ChatComponent,
+ 
+    
 
   ],
   imports: [

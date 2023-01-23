@@ -29,32 +29,7 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usaer Name</span>
-                                <img src="assets/img2.jpeg" class="rounded-circle" height="25px" width="25px" alt="Cinque Terre">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
+                            <button type="button" class="btn btn-danger">Log out</button>
                         </li>
 
                     </ul>
@@ -82,14 +57,14 @@
                         <!-- <form action="" method="post" enctype="multipart/form-data"> -->
 
                         <div class="input-group mb-3">
-                        <span class="input-group-text">@</span>
+                        <span class="input-group-text"></span>
                             <input type="text" class="form-control" [(ngModel)]="title" name="product_name" placeholder="Product Name" >
-                            <span class="input-group-text">@</span>
+                            <span class="input-group-text"></span>
                             <input type="text" class="form-control" [(ngModel)]="catagory" name="Product No" placeholder="Product Catagory" aria-label="Server">
                         </div>
 
                         <div class="input-group mb-3">
-                        <span class="input-group-text">@</span>
+                        <span class="input-group-text"></span>
                             <input type="number" class="form-control" [(ngModel)]="price" name="product_unitprice" placeholder="Unit Price" >
                         </div>
 <!--
@@ -109,7 +84,7 @@
                             <div class="input-group mb-3">
                         <!-- <span class="input-group-text">@</span>
                             <input type="number" class="form-control" name="product_quantity" placeholder="Quantity" > -->
-                            <span class="input-group-text">@</span>
+                            <span class="input-group-text"></span>
                             <input class="form-control bg-dark" [(ngModel)]="img" type="text" name="product_image" placeholder="Image Link">
                         </div>
 
