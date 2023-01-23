@@ -48,12 +48,15 @@
 
                     <!-- chat start -->
                     <div *ngFor="let message of messageList" class="ms-body">
-                      <p *ngIf="message.includes(email,0)" class="smsg">
+                      <div *ngIf="message.includes(email,0) || message.includes(email,1) || message.includes(email,2)">
+                        <p *ngIf="message.includes(email,2) || message.includes(email,1)" class="smsg" style="color:green">
+                            {{message}}
+                        </p>
+                        <p *ngIf="!message.includes(email,0)">
                           {{message}}
-                      </p>
-                      <p *ngIf="!message.includes(email,0)">
-                        {{message}}
-                      </p>
+                        </p>
+
+                      </div>
                     </div>
 
 

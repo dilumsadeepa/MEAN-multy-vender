@@ -3,8 +3,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProductService } from "../../service/product.service";
 import { OrderService } from "../../service/order.service";
+import { RatingService } from "../../service/rating.service";
 import { Product } from "../../../product";
 import { Order } from "../../../order";
+import { Rating } from "../../../rating";
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
@@ -16,12 +18,18 @@ export class ProductComponent {
 
   products: Product[] = [];
   orders: Order[] = [];
+  ratings: Rating[] = [];
   id!:string;
   img!:string;
   email!:string;
+  likes = 0;
 
   private routeSub: Subscription = new Subscription;
-  constructor(private route: ActivatedRoute, private router:Router, private productService: ProductService, private orderService: OrderService, private cookieService: CookieService) { }
+  constructor(private route: ActivatedRoute,
+    private router:Router, private productService: ProductService,
+    private orderService: OrderService,
+    private cookieService: CookieService,
+    private ratingService: RatingService) { }
 
   ngOnInit(){
     this.routeSub = this.route.params.subscribe(params => {
@@ -30,8 +38,28 @@ export class ProductComponent {
       // console.log(params['id']) //log the value of id
     });
     this.productService.getProduct().subscribe((products) => (this.products = products));
+    this.ratingService.getrating().subscribe((ratings) => (ratings.forEach(element => {
+      if (element.productid == this.id) {
+        this.likes = this.likes + 1;
+        console.log(this.likes);
+
+      }
+    })));
 
     this.email = this.cookieService.get('email');
+
+    console.log(this.ratings);
+
+
+    this.ratings.forEach(element => {
+      if (element.productid == this.id) {
+        this.likes = this.likes + 1;
+        console.log(this.likes);
+
+      }
+    });
+
+
 
 
   }
