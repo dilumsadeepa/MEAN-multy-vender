@@ -16,6 +16,7 @@ import { LoginComponent } from "./component/login/login.component";
 import { RegisterComponent } from "./component/register/register.component";
 import { UserComponent } from "./component/user/user.component";
 import { ChatComponent } from "./component/chat/chat.component";
+import { UserchatComponent } from "./component/userchat/userchat.component";
 
 
 
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'user', component: UserComponent},
   { path: 'chat', component: ChatComponent},
+  { path: 'userchat', component: UserchatComponent},
 
 ];
 
