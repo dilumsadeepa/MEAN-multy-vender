@@ -1,14 +1,15 @@
 
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
 
-        <app-adminsidebar></app-adminsidebar>
+        <app-usersidebar></app-usersidebar>
 
 
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column" >
 
             <!-- Main Content -->
             <div id="content">
@@ -37,9 +38,10 @@
                 </nav>
                 <!-- End of Topbar -->
 
+
                 <div class="cont">
 
-                    <h3 class="mx-4">Chat with seller</h3>
+                <h3 class="mx-4">Chat with seller</h3>
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -48,15 +50,12 @@
 
                     <!-- chat start -->
                     <div *ngFor="let message of messageList" class="ms-body">
-                      <div *ngIf="message.includes(email,0) || message.includes(email,1) || message.includes(email,2)">
-                        <p *ngIf="message.includes(email,2) || message.includes(email,1)" class="smsg" style="color:green">
-                            {{message}}
-                        </p>
-                        <p *ngIf="!message.includes(email,0)">
+                      <p *ngIf="message.includes(email,0)" class="smsg">
                           {{message}}
-                        </p>
-
-                      </div>
+                      </p>
+                      <p *ngIf="!message.includes(email,0)">
+                        {{message}}
+                      </p>
                     </div>
 
 
@@ -68,13 +67,16 @@
                           (keyup)="$event.keyCode == 13 && sendMessage()"
                         />
                       </div>
-                      <div class="col">
+                      <div class="col mb-4 mx-5">
                         <button (click)="sendMessage()" class="btn btn-primary">Send Message</button>
                       </div>
                     </div>
                 </div>
 
-                </div>
+
+            </div>
+
+
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -115,3 +117,5 @@
             </div>
         </div>
     </div>
+
+    
